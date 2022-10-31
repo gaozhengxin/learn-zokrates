@@ -36,8 +36,14 @@ initialize().then((defaultProvider) => {
     let A = ["14897476871502190904409029696666322856887678969656209656241038339251270171395", "16668832459046858928951622951481252834155254151733002984053501254009901876174"];
     // M0 = 7572cad4fee4b69695fc512f1b827ce3
     // M1 = f390c687acf166e7e1bbb583e01848df
-    let M0 = ["0x7572", "0xcad4", "0xfee4", "0xb696", "0x95fc", "0x512f", "0x1b82", "0x7ce3"];
-    let M1 = ["0xf390", "0xc687", "0xacf1", "0x66e7", "0xe1bb", "0xb583", "0xe018", "0x48df"];
+    //let M0 = [0x7572, 0xcad4, 0xfee4, 0xb696, 0x95fc, 0x512f, 0x1b82, 0x7ce3];
+    //let M1 = [0xf390, 0xc687, 0xacf1, 0x66e7, 0xe1bb, 0xb583, 0xe018, 0x48df];
+    let M0 = ["30066", "51924", "65252", "46742", "38396", "20783", "7042", "31971"];
+    let M1 = ["62352", "50823", "44273", "26343", "57787", "46467", "57368", "18655"];
+    console.log(`M0 ${M0}`);
+    console.log(`M1 ${M1}`);
+    //let M0 = ["0x7572", "0xcad4", "0xfee4", "0xb696", "0x95fc", "0x512f", "0x1b82", "0x7ce3"];
+    //let M1 = ["0xf390", "0xc687", "0xacf1", "0x66e7", "0xe1bb", "0xb583", "0xe018", "0x48df"];
     const { witness, output } = zokratesProvider.computeWitness(artifacts, [R, S, A, M0, M1]);
 
     const witnessPath = './run/witness';
